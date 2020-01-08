@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">VolleyEjemploApp</string>
+    <string name="txtMensaj">Sin Datos</string>
+    <string name="button_Sring">Consultar String</string>
+    <string name="button_json">Consultar Json</string>
+</resources>
