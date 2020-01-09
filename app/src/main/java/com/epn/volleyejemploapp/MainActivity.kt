@@ -10,7 +10,7 @@ import com.android.volley.VolleyError
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.Request
 import com.android.volley.Response
-
+import com.android.volley.toolbox.JsonObjectRequest
 
 
 
@@ -51,9 +51,22 @@ class MainActivity : AppCompatActivity() {
 
 
     fun onClickConsultarJson(view: View){
+        val queue = Volley.newRequestQueue(this)
+        val url2= "https://jsonplaceholder.typicode.com/todos/1"
 
- 
+
+        var jsObjRequest = JsonObjectRequest(Request.Method.GET, url2, null,
+            Response.Listener { response -> textView.setText("Response: $response") },
+            Response.ErrorListener { textView.setText("That didn't work!") })
+
+        queue.add(jsObjRequest)
+
+
     }
 
 
+
+
 }
+
+
